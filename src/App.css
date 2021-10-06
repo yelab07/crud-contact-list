@@ -1,4 +1,10 @@
+*{
+  margin: 0px;
+  box-shadow: border-box;
+}
+
 .App {
+  margin: 0px;
   text-align: center;
 }
 

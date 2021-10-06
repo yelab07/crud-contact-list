@@ -1,6 +1,9 @@
 import './App.css';
-import Title from './component/Text';
+import Form from './component/Form';
 import { useState } from "react";
+import FormContainer from './component/FormContainer';
+import Button from './component/Button';
+import Input from './component/Input';
 function App() {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
   const [contacts, setContacts] = useState([]);
@@ -10,13 +13,20 @@ function App() {
   };
   const addToContacts = (e) => {
     e.preventDefault();
+    setContacts([...contacts,form])
   }
   return (
     <div className="App">
-      <input onChange={onchange} name="name" type="text" />
-      <input onChange={onchange} name="phone" type="text" />
-      <input onChange={onchange} name="email" type="text" />
-      <button> Submit</button>
+      <FormContainer>
+        <Form onSubmit={addToContacts}>
+          <Input onChange={onChange} name="name" type="text" />
+          <Input onChange={onChange} name="phone" type="text" />
+          <Input onChange={onChange} name="email" type="text" />
+          <div>
+            <Button>Submit</Button>
+          </div>
+        </Form>
+      </FormContainer>
     </div>
   );
 }
