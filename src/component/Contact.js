@@ -1,9 +1,14 @@
 import styled from "styled-components";
-const Form = styled.form`
+
+const Contacts = styled.div`
   width: 600px;
   border: 0.5px solid #616161;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 10px 10px 30px #bebebe, -20px -20px 60px #ffffff;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+    
+  }
 `;
-export default Form;
+export default Contacts

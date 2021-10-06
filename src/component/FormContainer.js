@@ -7,4 +7,4 @@ const FormContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export default FormContainer
+export default FormContainer;

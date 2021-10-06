@@ -4,6 +4,8 @@ import { useState } from "react";
 import FormContainer from './component/FormContainer';
 import Button from './component/Button';
 import Input from './component/Input';
+import Contacts from './component/Contact';
+import ContactContainer from './component/ContactContainer';
 function App() {
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
   const [contacts, setContacts] = useState([]);
@@ -27,6 +29,16 @@ function App() {
           </div>
         </Form>
       </FormContainer>
+      <ContactContainer>
+        {contacts.map((contact,index) => (
+          <Contacts key={index}>
+          <h1>{contact.name}</h1>
+          <h1>{contact.phone}</h1>
+            <h1>{contact.email}</h1>
+            </Contacts>
+
+        ))}
+      </ContactContainer>
     </div>
   );
 }
