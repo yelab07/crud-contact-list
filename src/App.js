@@ -36,9 +36,43 @@ function App() {
     <div className="App">
       <FormContainer>
         <Form onSubmit={addToContacts}>
-          <Input onChange={onChange} name="name" type="text" />
-          <Input onChange={onChange} name="phone" type="text" />
-          <Input onChange={onChange} name="email" type="text" />
+          <Input
+            onChange={onChange}
+            name="fname"
+            type="text"
+            placeholder="First Name"
+          />
+          <Input
+            onChange={onChange}
+            name="lname"
+            type="text"
+            placeholder="Last Name"
+          />
+          <Input
+            onChange={onChange}
+            name="phone"
+            type="text"
+            placeholder="Phone Number"
+          />
+
+          <Input
+            onChange={onChange}
+            name="email"
+            type="text"
+            placeholder="E-mail"
+          />
+          <Input
+            onChange={onChange}
+            name="address"
+            type="text"
+            placeholder="Address"
+          />
+          <Input
+            onChange={onChange}
+            name="image"
+            type="text"
+            placeholder="Profile Image Url"
+          />
           <div>
             <Button>Submit</Button>
           </div>
@@ -47,9 +81,12 @@ function App() {
       <ContactContainer>
         {contacts.map((contact, index) => (
           <Contacts key={index}>
-            <h1>{contact.name}</h1>
+            <h1>{contact.fname}</h1>
+            <h1>{contact.lname}</h1>
             <h1>{contact.phone}</h1>
             <h1>{contact.email}</h1>
+            <h1>{contact.address}</h1>
+            <h1>{contact.image}</h1>
             <Button
               onClick={(e) => {
                 e.preventDefault();
