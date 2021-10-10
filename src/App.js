@@ -74,7 +74,7 @@ function App() {
             placeholder="Profile Image Url"
           />
           <div>
-            <Button>Submit</Button>
+            <Button>Add Contact</Button>
           </div>
         </Form>
       </FormContainer>
